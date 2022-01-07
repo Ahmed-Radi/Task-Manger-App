@@ -1,0 +1,10 @@
+.container-fluid {
+  width: 100%;
+  overflow-x: auto !important;
+  margin-bottom: 80px;
+}
+.title,.description {
+  word-break: break-all;
+  min-width: 200px;
+}
+tr:nth-child(even){background-color: #dafdff}

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  url = 'http://localhost:3000/'
+  url = 'https://task-mangar-app.herokuapp.com/'
   constructor(private http:HttpClient) { }
 
   signUp(credentials:any){

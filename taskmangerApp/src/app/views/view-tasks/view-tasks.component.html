@@ -1,20 +1,20 @@
-<div class="container">
+<div class="container-fluid">
   <table class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">title</th>
-        <th scope="col">description</th>
-        <th scope="col">complate</th>
-        <th scope="col">update</th>
-        <th scope="col">delete</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Complate</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let task of tasks;let i = index">
         <th scope="row">{{i +1}}</th>
-        <td>{{task.title}}</td>
-        <td>{{task.description}}</td>
+        <td class="title">{{task.title}}</td>
+        <td class="description">{{task.description}}</td>
         <td>{{task.complete}}</td>
         <td>
           <a routerLink="/edittask/{{task._id}}">
@@ -22,7 +22,7 @@
           </a>
         </td>
         <td>
-          <button (click)="deleteTask(task._id, i)" class="btn btn-outline-danger">delete</button>
+          <button (click)="deleteTask(task._id, i)" class="btn btn-outline-danger">Delete</button>
         </td>
       </tr>
     </tbody>

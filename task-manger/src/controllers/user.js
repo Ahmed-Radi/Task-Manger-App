@@ -4,6 +4,7 @@ const userSignUp = async (req, res) => {
     try {
         const user = new User(req.body);
         const token = await user.generateToken();
+        await user.save()
         res.status(200).send({user,token})
     } catch (error) {
         res.status(400).send(error)

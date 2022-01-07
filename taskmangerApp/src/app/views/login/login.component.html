@@ -15,7 +15,7 @@
         #email="ngModel"
         required
         email
-        (focus)="touchInput"
+        (focus)="touchInput()"
       />
       <div class="error" *ngIf="email.touched && email.invalid">
         <div *ngIf="email.errors?.['required']">Please Enter E-mail</div>
@@ -33,7 +33,7 @@
         ngModel
         #password="ngModel"
         required
-        (focus)="touchInput"
+        (focus)="touchInput()"
       />
       <div class="error" *ngIf="password.touched && password.invalid">
         <div *ngIf="password.errors?.['required']">

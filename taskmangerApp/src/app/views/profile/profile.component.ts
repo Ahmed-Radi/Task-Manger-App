@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Tasks } from 'src/app/interface/tasksInterface';
 import { Users } from 'src/app/interface/userInterface';
+import { TasksService } from 'src/app/services/tasks.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -10,8 +12,9 @@ import { UsersService } from 'src/app/services/users.service';
 export class ProfileComponent implements OnInit {
 
   user: Users = {};
-  file:any
-  constructor(private usersService: UsersService) { }
+  tasks: Tasks = {};
+  file:any;
+  constructor(private usersService: UsersService, private tasksService: TasksService) { }
 
   profile() {
     this.usersService.profile().subscribe({
@@ -27,8 +30,23 @@ export class ProfileComponent implements OnInit {
     this.usersService.deleteImage().subscribe(()=> {})
   }
 
+  getTask() {
+    this.tasksService.getTask().subscribe({
+      next: (res:any) => {
+        this.tasks = res
+      }, error: (httpError:any) => {
+        // console.log(httpError)
+      }
+    })
+  }
+
+  taskLengthen(task:any) {
+    return task.length
+  }
+
   ngOnInit(): void {
     this.profile()
+    this.getTask()
   }
 
 }

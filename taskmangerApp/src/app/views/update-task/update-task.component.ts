@@ -20,7 +20,7 @@ export class UpdateTaskComponent implements OnInit {
     this.tasksService.getSingleTask(this.id).subscribe({
       next: (res:any)=> {
         this.task = res
-        console.log(res)
+        // console.log(res)
       }
     })
   }
@@ -32,7 +32,6 @@ export class UpdateTaskComponent implements OnInit {
     })
   }
 
-
   taskForm = this.fb.group({
     title:['', [Validators.required, Validators.minLength(3)]],
     description:['', [Validators.required, Validators.minLength(3)]],
@@ -43,7 +42,7 @@ export class UpdateTaskComponent implements OnInit {
     return this.taskForm.controls
   }
   ngOnInit(): void {
-    console.log(this.id)
+    // console.log(this.id)
     this.getSingleTask()
   }
 

@@ -30,7 +30,7 @@ export class AddTasksComponent implements OnInit {
         this.tasks.splice(0,0,task)
         this.route.navigateByUrl('/viewtask')
       }, error: (httpError) => {
-        console.log(httpError)
+        // console.log(httpError)
       }
     })
   }

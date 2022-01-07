@@ -32,7 +32,7 @@
           formControlName="description"
         />
         <div class="error" *ngIf="myValues['description'].touched && myValues['description'].invalid">
-          <div *ngIf="myValues['description'].errors?.['required']">Please enter body</div>
+          <div *ngIf="myValues['description'].errors?.['required']">Please enter a description</div>
           <div *ngIf="myValues['description'].errors?.['minlength']">
             Description should have at least
             {{myValues['description'].errors?.['minlength'].requiredLength}} you entered

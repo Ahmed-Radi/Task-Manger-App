@@ -7,7 +7,7 @@ import { Tasks } from '../interface/tasksInterface';
 })
 export class TasksService {
 
-  url:any = 'http://localhost:3000/'
+  url:any = 'https://task-mangar-app.herokuapp.com/'
   constructor(private http:HttpClient) { }
 
   getTask() {

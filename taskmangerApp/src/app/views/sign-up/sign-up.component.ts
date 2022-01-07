@@ -36,13 +36,13 @@ export class SignUpComponent implements OnInit {
   signUp(credentials:any) {
     this.authService.signUp(credentials).subscribe({
       next: (res:any) => {
-        console.log(res)
+        // console.log(res)
         this.token = res.token;
         localStorage.setItem('token', this.token)
         this.uploadFile()
         this.router.navigateByUrl('/profile')
       }, error: (HttpError) => {
-        console.log(HttpError)
+        // console.log(HttpError)
         if (HttpError.error.errors?.age) {
           this.Message = HttpError.error.message.replace('User Validation Failed: Age: ', '')
           this.invalidAge = true

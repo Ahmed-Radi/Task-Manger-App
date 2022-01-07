@@ -17,10 +17,10 @@ export class ViewTasksComponent implements OnInit {
   getTask() {
     this.tasksService.getTask().subscribe({
       next: (res:any) => {
-        console.log(res)
+        // console.log(res)
         this.tasks = res
       }, error: (httpError:any) => {
-        console.log(httpError)
+        // console.log(httpError)
       }
     })
   }
@@ -28,10 +28,10 @@ export class ViewTasksComponent implements OnInit {
   deleteTask(taskId:any,index:number) {
     this.tasksService.deleteTask(taskId).subscribe({
       next: () => {
-        console.log(this.tasks)
+        // console.log(this.tasks)
         this.tasks.splice(index,1)
       }, error:(httpError)=> {
-        console.log(httpError)
+        // console.log(httpError)
       }
     })
   }

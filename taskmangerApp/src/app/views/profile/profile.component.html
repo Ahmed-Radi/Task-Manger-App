@@ -1,14 +1,26 @@
-<h2>Welcome <span>{{user.name}}</span> !!</h2>
+<div class="container">
+  <h2>Welcome <span>{{user.name}}</span>😃</h2>
+  <div class="all-info">
+    <div class="details">
+          <img class="detail__image" src="data:image/png;base64,{{user.avatar}}" width="200px" alt="iamge" *ngIf="user.avatar" />
+          <div class="details__info">
+            <p><span class="static-info">Name:</span> <span class="dynamic-info">{{user.name}}</span></p>
+            <p><span class="static-info">Age:</span> <span class="dynamic-info">{{user.age}}</span></p>
+            <p><span class="static-info">Email:</span> <span class="dynamic-info">{{user.email}}</span></p>
+          </div>
+          <div class="details__buttons">
+            <a class="btn btn-outline-primary" routerLink="/viewtask">View Task</a>
+            <a class="btn btn-outline-success" routerLink="/addtask">Add Task</a>
+            <button class="btn btn-outline-danger" (click)="deleteImage()" *ngIf="user.avatar">Delete Image</button>
+          </div>
+    </div>
+  </div>
 
-<div class="info">
-  <p>Name: <span>{{user.name}}</span></p>
-  <p>Age: <span>{{user.age}}</span></p>
-  <p>Email: <span>{{user.email}}</span></p>
-</div>
-<button class="btn btn-outline-danger" (click)="deleteImage()" *ngIf="user.avatar">Delete Image</button>
-<br />
-<img src="data:image/png;base64,{{user.avatar}}" width="200px" alt="iamge" *ngIf="user.avatar" />
-<div class="buttons">
-  <a class="btn btn-primary" routerLink="/viewtask" >View Task</a>
-  <a class="btn btn-success" routerLink="/addtask" >Add Task</a>
+  <section class="row">
+    <div class="col-12">
+      <p class="task-info">
+        Number of tasks you have is: <span class="task-info__task-number">{{taskLengthen(tasks)}}</span>
+      </p>
+    </div>
+  </section>
 </div>

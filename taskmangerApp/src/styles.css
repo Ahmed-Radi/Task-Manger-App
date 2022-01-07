@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .login,.sign-up {
   padding: 29px;
   box-shadow: -3px 5px 12px #000;

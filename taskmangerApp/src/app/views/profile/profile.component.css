@@ -1,13 +1,62 @@
-.info {
-  padding: 15px;
-  margin-top: 20px;
+.container {margin-bottom: 80px;}
+h2 span {
+  color: #04C696;
+  font-family: 'Gochi Hand', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
-h2 span,
-.info span {
+.all-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+.details {
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #d9f9ff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.detail__image {
+  padding: 15px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.details__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.details__info .dynamic-info {
   font-weight: 600;
-  color: #5757ce;
+  color: #2278FB;
   text-transform: capitalize;
 }
-.buttons a {
-  margin-left: 10px;
+.static-info {
+  display: inline-block;
+  width: 50px;
+}
+.dynamic-info {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+.task-info {
+  background-color: #d9f9ff;
+  font-size: 25px;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 20px;
+  text-align: center;
+
+  font-family: 'Gochi Hand', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+.task-info__task-number {
+  color: #2278FB;
 }
